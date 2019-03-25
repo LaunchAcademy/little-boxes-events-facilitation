@@ -1,22 +1,24 @@
 import React from 'react';
-import Numbers from './Numbers';
 import Picture from './Picture';
+import List from './List';
 
 const Wrapper = props => {
+  let picUrl = "https://s3.amazonaws.com/horizon-production/images/react-clever-ees.png"
+
+  let listItemMouseOver = item => {
+    console.error(`${item} is the best space item!`)
+  }
+
   return (
     <div className='box wrapper'>
-      <h1>{props.header}</h1>
-      <p>
-        {props.paragraph}
-      </p>
-      <Numbers
-        date={(new Date).toString()}
-        random={parseInt(Math.random() * 100)}
-      />
       <Picture
-        src={'https://s3.amazonaws.com/horizon-production/images/react-clever-ees.png'}
+        src={picUrl}
         alt={'Clever EEs'}
         list={props.list}
+      />
+      <List
+        items={props.list}
+        handleMouseOver={listItemMouseOver}
       />
     </div>
   )
