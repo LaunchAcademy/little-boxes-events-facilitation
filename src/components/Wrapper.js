@@ -3,11 +3,7 @@ import Picture from './Picture';
 import List from './List';
 
 const Wrapper = props => {
-  let picUrl = "https://s3.amazonaws.com/horizon-production/images/react-clever-ees.png"
-
-  let listItemMouseOver = item => {
-    console.error(`${item} is the best space item!`)
-  }
+  const picUrl = "https://s3.amazonaws.com/horizon-production/images/react-clever-ees.png"
 
   return (
     <div className='box wrapper'>

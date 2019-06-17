@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import style from './styles/app.scss'
 import Wrapper from './components/Wrapper';
 
-let list = [
+const list = [
   {
     id: 1,
     name: 'Asteroids'
