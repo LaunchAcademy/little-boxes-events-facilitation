@@ -1,10 +1,16 @@
 import React from 'react';
 
 const List = props => {
+
+  let listItemMouseOver = item => {
+    console.error(`${item} is the best space item!`)
+  }
+
   let listItems = props.items.map(item => {
     let packagedMouseOver = () => {
-      props.handleMouseOver(item.name)
+      listItemMouseOver(item.name)
     }
+    
     return <li onMouseOver={packagedMouseOver} key={item.id}>{item.name}</li>
   })
 

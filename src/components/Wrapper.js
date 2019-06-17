@@ -14,7 +14,6 @@ const Wrapper = props => {
       />
       <List
         items={props.list}
-        handleMouseOver={listItemMouseOver}
       />
     </div>
   )
