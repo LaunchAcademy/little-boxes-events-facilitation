@@ -2,9 +2,8 @@ import React from 'react';
 import List from './List';
 
 const Picture = props => {
-  let pictureClick = banana => {
+  let pictureClick = event => {
     console.log('HEY THERE!!')
-    console.warn(`You clicked on ${banana.target.alt}`)
   }
 
   return (
